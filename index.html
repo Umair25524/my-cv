@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Umair Hussain Khan</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,20 +17,9 @@
             max-width: 900px;
             margin: 20px auto;
             background: #fff;
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .left-column, .right-column {
-            padding: 20px;
-        }
-        .left-column {
-            flex: 1 1 30%;
-            border-right: 1px solid #ccc;
-        }
-        .right-column {
-            flex: 1 1 70%;
+            border-radius: 10px;
         }
         .header {
             text-align: center;
@@ -57,44 +48,44 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
-        .section p {
+        .section p, .section ul {
             color: #555;
-            margin: 0 0 10px;
-            line-height: 1.6;
+            margin: 0;
         }
         .section ul {
             list-style: none;
-            padding: 0;
-            color: #555;
+            padding-left: 0;
         }
         .section ul li {
             margin: 10px 0;
         }
-        .contact-info p, .expertise ul, .section p, .section ul, .section ol {
+        .section h3 {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .contact-info p, .expertise ul, ul, p, ol {
             font-size: 0.9em;
         }
         .contact-info p {
             margin: 5px 0;
         }
-        a {
-            color: #b08a50;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
+        @media (max-width: 767px) {
+            .left-column, .right-column {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border: none;
             }
+        }
+        @media (min-width: 768px) {
             .left-column {
-                border-right: none;
-                border-bottom: 1px solid #ccc;
-                padding-bottom: 20px;
-                flex: 1 1 100%;
+                width: 30%;
+                padding-right: 20px;
+                border-right: 1px solid #ccc;
             }
             .right-column {
-                flex: 1 1 100%;
+                width: 70%;
+                padding-left: 20px;
             }
         }
     </style>
@@ -102,91 +93,92 @@
 <body>
 
 <div class="container">
-    <div class="left-column">
-        <div class="header">
-            <img src="./ImgScan2.jpeg" alt="Umair Khan">
-            <h1>Umair Hussain Khan</h1>
-            <h2>Linux Consultant</h2>
+    <div class="row">
+        <div class="left-column col-md-4">
+            <div class="header">
+                <img src="./ImgScan2.jpeg" alt="Umair Khan" class="img-fluid">
+                <h1>Umair Hussain Khan</h1>
+                <h2>Linux Consultant</h2>
+            </div>
+            <div class="contact-info">
+                <p><strong>Contact</strong></p>
+                <p><i class="fas fa-phone"></i> 89815-40864</p>
+                <p><i class="fas fa-envelope"></i> 2021wb86635@wilp.bits-pilani.ac.in</p>
+                <p><i class="fas fa-globe"></i> <a href="https://umair25524.github.io/my-cv/" target="_blank">https://umair25524.github.io/my-cv/</a></p>
+            </div></br>
+            <div class="expertise">
+                <p><strong>Skills</strong><br>
+                <strong>Operating System</strong></p>
+                <ul>
+                    <li>Red Hat</li>
+                    <li>Ubuntu</li>
+                    <li>Oracle</li>
+                    <li>HP-UX</li>
+                </ul>
+                <p><strong>Cloud / Tools / Other skills</strong></p>
+                <ul>
+                    <li>AWS</li>
+                    <li>Azure</li>
+                    <li>Ansible</li>
+                    <li>Bash Scripting</li>
+                    <li>Service Now</li>
+                    <li>Kubernetes</li>
+                    <li>Docker</li>
+                </ul>
+                <p><strong>Personal Skills</strong></p>
+                <ul>
+                    <li>Creativity</li>
+                    <li>Team building</li>
+                    <li>Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
         </div>
-        <div class="contact-info">
-            <p><strong>Contact</strong></p>
-            <p>89815-40864</p>
-            <p><a href="mailto:2021wb86635@wilp.bits-pilani.ac.in">2021wb86635@wilp.bits-pilani.ac.in</a></p>
-            <p><a href="https://umair25524.github.io/my-cv/" target="_blank">https://umair25524.github.io/my-cv/</a></p>
-        </div>
-        <div class="expertise">
-            <p><strong>Skills</strong></p>
-            <p><strong>Operating System</strong></p>
-            <ul>
-                <li>Red Hat</li>
-                <li>Ubuntu</li>
-                <li>Oracle</li>
-                <li>HP-UX</li>
-            </ul>
-            <p><strong>Cloud / Tools / Other skills</strong></p>
-            <ul>
-                <li>AWS</li>
-                <li>Azure</li>
-                <li>Ansible</li>
-                <li>Bash Scripting</li>
-                <li>Service Now</li>
-                <li>Kubernetes</li>
-                <li>Docker</li>
-            </ul>
-            <p><strong>Personal Skills</strong></p>
-            <ul>
-                <li>Creativity</li>
-                <li>Team building</li>
-                <li>Communication</li>
-                <li>Problem Solving</li>
-                <li>Leadership</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="right-column">
-        <div class="section">
-            <h2>Personal Profile</h2>
-            <p>I am a Linux Cloud Administrator, specializing in maintaining and optimizing cloud infrastructure, with expertise in Linux environments. I provide second-level support, ensuring the security and reliability of cloud systems. Proficient in managing Linux servers on platforms like AWS and Azure, I am committed to staying updated on industry best practices, contributing to efficient and scalable cloud solutions, and collaborating effectively within cross-functional teams.</p>
-        </div>
-        <div class="section">
-            <h2>Career Objective</h2>
-            <p>I aim to take up a challenging career in a progressive organization that gives me scope to update my knowledge and skills in accordance with the latest trends and be a part of a team that works dynamically towards the growth of the organization and satisfaction thereof.</p>
-        </div>
-        <div class="section">
-            <h2>Work Experience</h2>
-            <p><strong>Linux Consultant</strong><br>
-                Wipro LTD | August 2023 - present</p>
-            <ul>
-                <li>Design concept development and implementation for the main product application</li>
-                <li>Leading a team of five mid-level designers</li>
-                <li>Coordinating social media graphics team</li>
-            </ul>
-            <p><strong>Unix Linux System Administrator</strong><br>
-                Wipro LTD | March 2022 - August 2023</p>
-            <ul>
-                <li>Creating and editing graphic design assets for the web application and website</li>
-                <li>Helping with day-to-day project tasks</li>
-                <li>Developing and editing social media templates</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>Bachelor of Computer Applications</strong><br>
-                Techno India | 2017 - 2020</p>
-            <p><strong>Masters of Technology (MTECH)</strong><br>
-                Birla Institute of Technology And Science, Pilani (BITS Pilani) | 2022 - PRESENT</p>
-        </div>
-        <div class="section">
-            <h2>Certification</h2>
-            <ol>
-                <li>AWS Certified Solutions Architect - Associate</li>
-                <li>AWS Certified Cloud Practitioner</li>
-                <li>Microsoft Certified: Azure AI Fundamentals</li>
-            </ol>
+        <div class="right-column col-md-8">
+            <div class="section">
+                <h2>Personal Profile</h2>
+                <p>I am a Linux Cloud Administrator, specializing in maintaining and optimizing cloud infrastructure, with expertise in Linux environments. I provide second-level support, ensuring the security and reliability of cloud systems. Proficient in managing Linux servers on platforms like AWS and Azure, committed to staying updated on industry best practices, I contribute to efficient and scalable cloud solutions, collaborating effectively within cross-functional teams.</p>
+            </div>
+            <div class="section">
+                <h2>Career Objective</h2>
+                <p>Aim to take up a challenging career in a progressive organization that gives me scope to update my knowledge and skills in accordance with the latest trends and be a part of a team that works dynamically towards the growth of the organization and satisfaction thereof.</p>
+            </div>
+            <div class="section">
+                <h2>Work Experience</h2>
+                <p><strong>Linux Consultant</strong><br> Wipro LTD | August 2023 - present</p>
+                <ul>
+    <li>Designing, deploying, and managing Linux-based infrastructure to ensure high availability and scalability.</li>
+    <li>Providing expert-level troubleshooting and support for Linux systems, resolving complex issues efficiently.</li>
+    <li>Collaborating with cross-functional teams to implement security best practices and optimize system performance.</li>
+</ul>
+                <p><strong>Unix Linux System Administrator</strong><br> Wipro LTD | March 2022 - August 2023</p>
+                <ul>
+    <li>Managed and maintained Unix/Linux servers, ensuring optimal performance and uptime.</li>
+    <li>Automated routine tasks using scripting languages, improving efficiency and reducing errors.</li>
+    <li>Monitored system health and security, implementing updates and patches as necessary.</li>
+</ul>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <p><strong>Bachelor of Computer Applications</strong><br> Techno India | 2017 - 2020</p>
+                <p><strong>Masters of Technology (MTECH)</strong><br> Birla Institute of Technology And Science, Pilani (BITS Pilani) | 2022 - PRESENT</p>
+            </div>
+            <div class="section">
+                <h2>Certification</h2>
+                <ol>
+                    <li>AWS Certified Solutions Architect - Associate</li>
+                    <li>AWS Certified Cloud Practitioner</li>
+                    <li>Microsoft Certified: Azure AI Fundamentals</li>
+                </ol>
+            </div>
         </div>
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>
