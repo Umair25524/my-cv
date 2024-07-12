@@ -15,19 +15,20 @@
             max-width: 900px;
             margin: 20px auto;
             background: #fff;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .left-column, .right-column {
+            padding: 20px;
         }
         .left-column {
-            width: 30%;
-            padding-right: 20px;
+            flex: 1 1 30%;
             border-right: 1px solid #ccc;
         }
         .right-column {
-            width: 70%;
-            padding-left: 20px;
+            flex: 1 1 70%;
         }
         .header {
             text-align: center;
@@ -35,16 +36,17 @@
         }
         .header img {
             width: 150px;
-		 height:50%
+            height: auto;
+            border-radius: 50%;
         }
         .header h1 {
             margin: 10px 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
             color: #b08a50;
         }
         .header h2 {
             margin: 5px 0;
-            font-size: 1.0em;
+            font-size: 1.2em;
             color: #777;
         }
         .section {
@@ -52,40 +54,53 @@
         }
         .section h2 {
             color: #b08a50;
-            font-size: 1.0em;
+            font-size: 1.2em;
             margin-bottom: 10px;
         }
-	   .section p {
-		padding-left: 5px;
-	   }
-        .section p, .section ul {
+        .section p {
             color: #555;
-            margin: 0;
-
+            margin: 0 0 10px;
+            line-height: 1.6;
         }
         .section ul {
             list-style: none;
-        }
-        .section h3 {
-            font-size: 0.9rem;
-		font-weight:0;        
+            padding: 0;
+            color: #555;
         }
         .section ul li {
             margin: 10px 0;
         }
-        .contact-info, .expertise,{
-            margin-bottom: 1px;
-        }
-        .contact-info p, .expertise ul, ul,p,ol {
+        .contact-info p, .expertise ul, .section p, .section ul, .section ol {
             font-size: 0.9em;
         }
         .contact-info p {
             margin: 5px 0;
-		 }
+        }
+        a {
+            color: #b08a50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-column {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+                flex: 1 1 100%;
+            }
+            .right-column {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
- 
+
 <div class="container">
     <div class="left-column">
         <div class="header">
@@ -96,12 +111,12 @@
         <div class="contact-info">
             <p><strong>Contact</strong></p>
             <p>89815-40864</p>
-            <p>2021wb86635@wilp.bits-pilani.ac.in</p>
-<p>https://umair25524.github.io/my-cv/</p>
+            <p><a href="mailto:2021wb86635@wilp.bits-pilani.ac.in">2021wb86635@wilp.bits-pilani.ac.in</a></p>
+            <p><a href="https://umair25524.github.io/my-cv/" target="_blank">https://umair25524.github.io/my-cv/</a></p>
         </div>
         <div class="expertise">
             <p><strong>Skills</strong></p>
-<p><strong>Operating System</strong></p>
+            <p><strong>Operating System</strong></p>
             <ul>
                 <li>Red Hat</li>
                 <li>Ubuntu</li>
@@ -112,11 +127,11 @@
             <ul>
                 <li>AWS</li>
                 <li>Azure</li>
-			<li>Ansible</li>
-			<li>Bash Scripting</li>
+                <li>Ansible</li>
+                <li>Bash Scripting</li>
                 <li>Service Now</li>
                 <li>Kubernetes</li>
-			<li>Docker</li>
+                <li>Docker</li>
             </ul>
             <p><strong>Personal Skills</strong></p>
             <ul>
@@ -128,25 +143,19 @@
             </ul>
         </div>
     </div>
- 
+
     <div class="right-column">
         <div class="section">
             <h2>Personal Profile</h2>
-            <p>I am a Linux Cloud Administrator, I specialize in maintaining and optimizing cloud infrastructure, with
-expertise in Linux environments. I provide second-level support, ensuring the security and reliability of
-cloud systems. Proficient in managing Linux servers on platforms like AWS and Azure, committed to
-staying updated on industry best practices, I contribute to efficient and scalable cloud solutions,
-collaborating effectively within cross-functional teams.</p>
+            <p>I am a Linux Cloud Administrator, specializing in maintaining and optimizing cloud infrastructure, with expertise in Linux environments. I provide second-level support, ensuring the security and reliability of cloud systems. Proficient in managing Linux servers on platforms like AWS and Azure, I am committed to staying updated on industry best practices, contributing to efficient and scalable cloud solutions, and collaborating effectively within cross-functional teams.</p>
         </div>
-	  <div class="section">
+        <div class="section">
             <h2>Career Objective</h2>
-            <p>Aim to take up challenging career in a progressive organization that gives me scope to update my
-knowledge and skill in accordance with the latest trend and be a part of a team that work dynamically
-towards the growth of the organization and satisfaction thereof</p>
+            <p>I aim to take up a challenging career in a progressive organization that gives me scope to update my knowledge and skills in accordance with the latest trends and be a part of a team that works dynamically towards the growth of the organization and satisfaction thereof.</p>
         </div>
         <div class="section">
             <h2>Work Experience</h2>
-            <p><strong> Linux Consultant </strong><br>
+            <p><strong>Linux Consultant</strong><br>
                 Wipro LTD | August 2023 - present</p>
             <ul>
                 <li>Design concept development and implementation for the main product application</li>
@@ -160,25 +169,24 @@ towards the growth of the organization and satisfaction thereof</p>
                 <li>Helping with day-to-day project tasks</li>
                 <li>Developing and editing social media templates</li>
             </ul>
-           </div>
+        </div>
         <div class="section">
             <h2>Education</h2>
-            <p><strong>Bachelor of Computer Applications</strong><br><span>
-                Techno India| 2017 - 2020</p><br>
+            <p><strong>Bachelor of Computer Applications</strong><br>
+                Techno India | 2017 - 2020</p>
             <p><strong>Masters of Technology (MTECH)</strong><br>
-                Birla Institute of Technology And Science, Pilani (BITS Pilani)| 2022 - PRESENT </p>
+                Birla Institute of Technology And Science, Pilani (BITS Pilani) | 2022 - PRESENT</p>
         </div>
-<div class="section">
+        <div class="section">
             <h2>Certification</h2>
-<ol>
-            <li>AWS Certified Solutions Architect - Associate</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Microsoft Certified: Azure AI Fundamentals </li>
-<ol>
+            <ol>
+                <li>AWS Certified Solutions Architect - Associate</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Microsoft Certified: Azure AI Fundamentals</li>
+            </ol>
         </div>
-
     </div>
 </div>
- 
+
 </body>
 </html>
